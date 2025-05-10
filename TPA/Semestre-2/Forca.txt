@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tpa
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string escolha="", resp="";
+
+            int acertos = 0, erros = 0, pos = 0;
+
+            char letra;
+
+            string[] palavras = {"heroi", "bola de vôlei", "Matagal", 
+                "Arthur", "vôlei", "fonte de água", "prefeitura", "roupa" };
+
+            string[] dicas = {"Inimigo do vilão", "instrumento usado no vôlei", 
+                "lugar com mato/floresta", "Um dos primeiros da lista", "O segundo esporte mais jogado do Brasil",
+            "Lugar que solta água", "onde o Manga fica", "Armário"};
+            
+
+            Console.WriteLine("\n\nBem vindo ao jogo Forca\n\n");
+
+            Random alea = new Random();
+            int sort = alea.Next(0, 7);
+            escolha = palavras[sort];
+            int cont = 50;
+            Console.WriteLine($"\n\nPalavra: {escolha}\n\n");
+
+           
+
+            for (int c = 0; c < escolha.Length; c++)
+            {
+                Console.SetCursorPosition(cont, 12);
+                Console.WriteLine("-");
+                cont++;
+            }
+
+            do
+            {
+               
+                Console.SetCursorPosition(45, 14);
+                Console.WriteLine("Digite um palpite de letra:  -digite * para ativar dica- ");
+                resp = Console.ReadLine();
+
+                    if (escolha.Contains(resp)) 
+                    {
+                        letra = char.Parse(resp);
+                        pos = Array.IndexOf(escolha.ToCharArray(), letra);
+                        Console.SetCursorPosition(pos + 50, 12);
+                        Console.WriteLine($"{resp}");
+                        acertos++;
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(18,20);
+                        Console.WriteLine("erro");
+                        erros++;
+                    }
+                    Console.SetCursorPosition(70, 19);
+                    Console.WriteLine($"Acertos: {acertos}");
+                    Console.SetCursorPosition(70,20);
+                    Console.WriteLine($"Erros: {erros}");
+                    
+                    
+            } while (acertos < (escolha.Length - 1) || erros < 6);
+           
+
+
+
+
+
+        }
+    }
+}

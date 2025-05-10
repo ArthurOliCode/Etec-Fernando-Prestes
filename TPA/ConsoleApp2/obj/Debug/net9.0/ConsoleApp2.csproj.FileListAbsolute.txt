@@ -1,0 +1,14 @@
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\bin\Debug\net9.0\ConsoleApp2.exe
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\bin\Debug\net9.0\ConsoleApp2.deps.json
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\bin\Debug\net9.0\ConsoleApp2.runtimeconfig.json
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\bin\Debug\net9.0\ConsoleApp2.dll
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\bin\Debug\net9.0\ConsoleApp2.pdb
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ConsoleApp2.AssemblyInfoInputs.cache
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ConsoleApp2.AssemblyInfo.cs
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ConsoleApp2.csproj.CoreCompileInputs.cache
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ConsoleApp2.dll
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\refint\ConsoleApp2.dll
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ConsoleApp2.pdb
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ConsoleApp2.genruntimeconfig.cache
+e:\Arquivos\Arthur\Cursos Online\Fatec\Tpa\exerci\ConsoleApp2\obj\Debug\net9.0\ref\ConsoleApp2.dll

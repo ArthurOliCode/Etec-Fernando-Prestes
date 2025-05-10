@@ -1,0 +1,47 @@
+nt n, a = 0, b = 0, c = 0;
+
+Random nGen = new Random();
+
+do
+{
+    Console.Clear();
+    Console.Write("How many people, please insert an even number: ");
+    n = int.Parse(Console.ReadLine());
+} while (n % 2 != 0);
+string[] name = new string[n];
+string[] rName = new string[n];
+string[,] nameDuos = new string[n, 2];
+Console.Clear();
+
+for (int i = 0; i < n; i++)
+{
+    Console.Write($"Insert the {i + 1}° name: ");
+    name[i] = Console.ReadLine();
+}
+
+for (int i = 0; i < n; i++)
+{
+
+    do
+    {
+        a = nGen.Next(0, n);
+    } while (name[a] == "*");
+    if (name[a] != "*")
+    {
+        rName[i] = name[a];
+    }
+    name[a] = "*";
+
+}
+Console.Clear();
+b = n / 2;
+for (int i = 0; i <= b; i += 2)
+{
+    if (b < n - 2)
+    {
+        b++;
+    }
+    nameDuos[i, 0] = rName[i]; nameDuos[i, 1] = rName[i + 1];
+    c++;
+    Console.WriteLine($"a {c}° dupla é: {nameDuos[i, 0]} , {nameDuos[i, 1]}");
+}

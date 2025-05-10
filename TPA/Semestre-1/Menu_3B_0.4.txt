@@ -1,0 +1,540 @@
+// See https://aka.ms/new-console-template for more informationusing System;
+using System;
+using System.Globalization;
+using System.Threading;
+
+namespace Tpa
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int option;
+                string resp = "";
+                //Laço de repetição para o menu
+                do
+                {
+                    //opções-menu
+                    Console.Clear();
+                    Console.WriteLine("------------------------------");
+                    Console.WriteLine("| Escolha uma opção:         |");
+                    Console.WriteLine("| [1] Conta Letras           |");
+                    Console.WriteLine("| [2] Converter caracteres   |");
+                    Console.WriteLine("| [3] Letreiro               |");
+                    Console.WriteLine("| [4] Desliza Letra          |");
+                    Console.WriteLine("| [5] Corrija Nomes          |");
+                    Console.WriteLine("| [6] Classificar palavras   |");
+                    Console.WriteLine("| [7] SortDuplas             |");
+                    Console.WriteLine("| [8] Fim                    |");
+                    Console.WriteLine("------------------------------");
+                    Console.Write("Digite a opção desejada: ");
+                    //Tratamento de erro
+                    if (!int.TryParse(Console.ReadLine(), out option))
+                    {
+                        Console.WriteLine("Opção inválida, por favor digite um número.");
+                        continue;
+                    }
+
+                    switch (option)
+                    {
+                        case 1:
+                            Conta_letra();
+                            break;
+                        case 2:
+                            zenit_polar();
+                            break;
+                        case 3:
+                            Letreiro();
+                            break;
+                        case 4:
+                            desliza_letra();
+                            break;
+                        case 5:
+                            corrija_nome();
+                            break;
+                        case 6:
+                            ClasPalvras();
+                            break;
+                        case 7:
+                            SortDuplas();
+                            break;
+                        case 8:
+                            Console.WriteLine("Saindo...");
+                            break;
+                        default:
+                            Console.WriteLine("Opção inválida, por favor tente novamente.");
+                            break;
+                    }
+                    Console.Clear();
+                    Console.WriteLine("Você deseja continuar o menu principal? (s/n): ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp[0].ToString().ToLower() : "n";
+
+                } while (resp.Equals("s"));
+            }
+            finally
+            {
+                Console.Clear();
+                Console.SetCursorPosition(10, 10);
+                Console.WriteLine("\nPrograma Encerrado. Obrigado por usar");
+            }
+
+
+
+
+
+            //Função para o programa Conta_Letra do menu
+            static void Conta_letra()
+            {
+
+                string vFrase, vLetra, resp = "";
+                int contA, contE, contI, contO, contU, contCon;
+                do
+                {
+                    Console.WriteLine("Escreva uma frase:");
+                    vFrase = Console.ReadLine();
+
+                    int vTam = vFrase.Length;
+                    //Variáveis para casos isolados
+                    contCon = 0;
+                    contA = 0;
+                    contE = 0;
+                    contI = 0;
+                    contO = 0;
+                    contU = 0;
+
+                    for (int i = 0; i < vTam; i++)
+                    {
+                        vLetra = vFrase.Substring(i, 1);
+                        switch (vLetra.ToLower())
+                        {
+                            case "a":
+                                contA++;
+                                break;
+                            case "e":
+                                contE++;
+                                break;
+                            case "i":
+                                contI++;
+                                break;
+                            case "o":
+                                contO++;
+                                break;
+                            case "u":
+                                contU++;
+                                break;
+                            default:
+                                if (!string.IsNullOrEmpty(vLetra) && !char.IsWhiteSpace(vLetra[0]) && char.IsLetter(vLetra[0]))
+                                {
+                                    contCon++;
+                                }
+                                break;
+                        }
+                    }
+                    //Apresentação dos dados
+                    Console.WriteLine($"A frase tem {vTam} caracteres.");
+                    Console.WriteLine($"Quantidade de vogais 'a': {contA}.");
+                    Console.WriteLine($"Quantidade de vogais 'e': {contE}.");
+                    Console.WriteLine($"Quantidade de vogais 'i': {contI}.");
+                    Console.WriteLine($"Quantidade de vogais 'o': {contO}.");
+                    Console.WriteLine($"Quantidade de vogais 'u': {contU}.");
+                    Console.WriteLine($"Quantidade de consoantes: {contCon}.");
+
+                    Console.WriteLine("\n\nVocê deseja continuar o Conta-Letra? (s/n): ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp[0].ToString().ToLower() : "n";
+                } while (resp.Equals("s"));
+            }
+
+
+
+
+
+            static void zenit_polar()
+            {
+
+                //String para registrar a frase do usuário
+                string vFrase, resp = " ";
+                do
+                {
+                    Console.WriteLine("Escreva uma frase para ser convertida:");
+                    vFrase = Console.ReadLine().ToLower();
+
+                    //Vetor de caracter para conversão de criptografia
+                    char[] array = vFrase.ToCharArray();
+
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        switch (array[i])
+                        {
+                            case 'z':
+                                array[i] = 'p';
+                                break;
+                            case 'p':
+                                array[i] = 'z';
+                                break;
+                            case 'e':
+                                array[i] = 'o';
+                                break;
+                            case 'o':
+                                array[i] = 'e';
+                                break;
+                            case 'n':
+                                array[i] = 'l';
+                                break;
+                            case 'l':
+                                array[i] = 'n';
+                                break;
+                            case 'i':
+                                array[i] = 'a';
+                                break;
+                            case 'a':
+                                array[i] = 'i';
+                                break;
+                            case 't':
+                                array[i] = 'r';
+                                break;
+                            case 'r':
+                                array[i] = 't';
+                                break;
+                        }
+                    }
+
+                    Console.WriteLine("Frase convertida: " + new string(array));
+                    Console.WriteLine("\n\nVocê deseja continuar o Zenit Polar? (s/n): ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp[0].ToString().ToLower() : "n";
+                } while (resp.Equals("s"));
+            }
+
+
+
+
+            static void Letreiro()
+            {
+                int vTam;
+                string vFrase, resp;
+                int i = 0;
+                {
+                    // Apresentação do programa com WriteLine()
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("  Bem vindo ao Letreiro");
+                    Console.WriteLine("---------------------------\n\n");
+                    Console.WriteLine("\nescreva uma frase:");
+                    // Registro da palavra a uma string
+                    vFrase = Console.ReadLine();
+                    vTam = vFrase.Length;
+                    // Objeto criado a partir da string, para que assim, seja possível, preenche-la com espaços vazios
+                    vFrase = new string(' ', 3 * vTam) + vFrase;
+                    Console.SetCursorPosition(20, 12);
+                    do
+                    {
+                        do
+                        {
+                            if (i < vFrase.Length)
+                            {
+                                i++;
+                            }
+                            else
+                            {
+                                i = 0;
+                            }
+
+                            Console.Clear();
+                            Console.SetCursorPosition(20, 10);
+                            Console.WriteLine("Bem vindo ao Letreiro");
+                            string letreiro = vFrase.Substring(i) + vFrase.Substring(0, i);
+                            Console.SetCursorPosition(20, 20);
+                            Console.WriteLine($"[{letreiro}]");
+                            Thread.Sleep(100);
+                            Console.WriteLine(' ');
+
+                        } while (!Console.KeyAvailable);
+                        Console.WriteLine("Deseja continuar com o letreiro? (s/n): ");
+                        resp = Console.ReadLine();
+                        resp = resp.Length > 0 ? resp.Substring(0, 1).ToLower() : "n";
+                    } while (resp != "n");
+                }
+            }
+
+
+
+
+            static void desliza_letra()
+            {
+                int vTam;
+                string vFrase, resp;
+                int i = 0;
+                do
+                {
+                    // Apresentação do programa com WriteLine()
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("  Bem vindo ao Desliza Letra");
+                    Console.WriteLine("---------------------------\n\n");
+                    Console.WriteLine("\nescreva uma frase:");
+                    // Registro da palavra a uma string
+                    vFrase = Console.ReadLine();
+                    vTam = vFrase.Length;
+                    // Limpar a tela antes de começar
+                    Console.Clear();
+                    for (int c1 = 0; c1 < vTam; c1++)
+                    {
+                        int Tela = Console.WindowWidth - 1;
+                        for (int c2 = Tela; c2 >= c1; c2--)
+                        {
+                            Console.SetCursorPosition(c2, 12);
+                            Console.Write(vFrase[c1]);
+                            Thread.Sleep(30);
+                            if (c2 > c1)
+                            {
+                                Console.SetCursorPosition(c2, 12);
+                                Console.Write(' ');
+                            }
+                        }
+                    }
+                    Console.WriteLine("\n\n\nDeseja continuar com o Desliza-Letra? (s/n): ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp.Substring(0, 1).ToLower() : "n";
+                } while (resp.Equals("s"));
+            }
+
+
+
+
+
+            static void corrija_nome()
+            {
+                string resp = " ";
+                do
+                {
+                    Console.WriteLine("Digite um nome (ou vários nomes separados por vírgula):");
+                    string input = Console.ReadLine();
+
+                    var nomes = input.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    foreach (var nome in nomes)
+                    {
+                        string nomeCorrigido = CorrigirNome(nome.Trim());
+                        Console.WriteLine(nomeCorrigido);
+                    }
+                    Console.WriteLine("\n\nVocê deseja continuar o Corrija-Nome? (s/n): ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp[0].ToString().ToLower() : "n";
+                } while (resp.Equals("s"));
+            }
+
+
+
+
+            static string CorrigirNome(string nome)
+            {
+                string resp = " ";
+                var cultura = new CultureInfo("pt-BR");
+                var partes = nome.Split(' ');
+                do
+                {
+
+                    for (int i = 0; i < partes.Length; i++)
+                    {
+                        if (!string.IsNullOrWhiteSpace(partes[i]))
+                        {
+                            // Capitalizar a primeira letra e colocar o resto em minúsculas
+                            partes[i] = cultura.TextInfo.ToTitleCase(partes[i].ToLower());
+                        }
+                    }
+
+                    return string.Join(" ", partes);
+                    Console.WriteLine("\n\nVocê deseja continuar o Corrigir-Nome? (s/n): ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp[0].ToString().ToLower() : "n";
+                } while (resp.Equals("s"));
+            }
+
+
+
+
+
+            static void ClasPalvras()
+            {
+                string resp = " ", temp, palavras, troca, troca2, cor;
+                int qPalav;
+
+                do
+                {
+
+                    // Apresentação do programa com WriteLine()
+                    Console.Clear();
+                    Console.WriteLine("---------------------------------------");
+                    Console.WriteLine("  Bem vindo ao Classifica Palavras");
+                    Console.WriteLine("---------------------------------------\n\n");
+                    Console.WriteLine("\nIntrodução rápida:  ");
+                    Console.WriteLine("\nEsse programa, irá classificar\n" +
+                        "algumas palavras em ordem alfabética,\n" +
+                        "de acordo com a quantidade de elementos digitada\n\n\n");
+
+
+                    do
+                    {
+                        Console.WriteLine("Digite a quantidade de palavras que deseja classificar: ");
+                    } while (!int.TryParse(Console.ReadLine(), out qPalav) || qPalav < 0);
+
+
+                    Console.WriteLine("\n\nDeseja que seja organizado em: [c/d]");
+                    Console.WriteLine("\n1 - Crescente ");
+                    Console.WriteLine("\n2 - Decrescente\n");
+                    temp = Console.ReadLine();
+                    temp = temp.ToLower().Substring(0,1);
+
+                    //Tratamento de erro
+                    while (!temp.Equals("c") & !temp.Equals("d"))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\nInválido. Por favor, digite uma resposta acertiva.");
+                        Console.WriteLine("\nDeseja que seja organizado em: [c/d]");
+                        Console.WriteLine("\n1 - Crescente ");
+                        Console.WriteLine("\n2 - Decrescente\n");
+                        temp = Console.ReadLine();
+                        temp = temp.ToLower().Substring(0, 1);
+                    }
+
+
+                    string[] orgPala = new string[qPalav];
+                    for (int c = 0; c < qPalav; c++)
+                    {
+                        try
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Digite uma palavra: ");
+                            palavras = Console.ReadLine();
+                            orgPala[c] += palavras;
+                        }
+                        catch (ArgumentNullException)
+                        {
+                            Console.WriteLine("Por favor, preencha o espaço solicitado!");
+                        }
+                    }
+
+                    bool crescente = temp.Equals("c");
+                    OrgBolha(orgPala, crescente);
+
+                    Console.WriteLine("\n\t\tResultado:\n\n");
+                    Console.WriteLine("--------------------------------");
+                    foreach(string nome in orgPala)
+                    {
+                        Console.WriteLine($"|            {nome}");
+                    }
+                    Console.WriteLine("--------------------------------\n\n");
+                    
+
+                    Console.WriteLine("\n\nVocê deseja continuar o Classificar-Nomes ? (s / n) : ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp[0].ToString().ToLower() : "n";
+                } while (resp.Equals("s"));
+            }
+
+
+            static void OrgBolha(string[] array, bool crescente)
+            {
+                int tam = array.Length;
+                bool trocou;
+
+                //Ordenação pelo método Bolha/BubbleSort
+                do
+                {
+                    trocou = false;
+                    for(int i=0; i<tam - 1; i++)
+                    {
+                        bool comparacao = crescente ? string.Compare(array[i], array[i + 1]) > 0 : string.Compare(array[i], array[i + 1]) < 0;
+                        if (comparacao)
+                        {
+                            //Troca dos conteúdos das variáveis
+                            string temp = array[i];
+                            array[i] = array[i + 1];
+                            array[i + 1] = temp;
+                            trocou = true;
+
+                        }
+                    }
+                } while (trocou);
+            }
+
+
+            static void SortDuplas()
+            {
+                int n, a = 0, b = 0, c;
+                string resp = " ";
+
+                Random nGen = new Random();
+                do
+                {
+                    do
+                    {
+                        // Apresentação do programa com WriteLine()
+                        Console.Clear();
+                        Console.WriteLine("---------------------------------------");
+                        Console.WriteLine("  Bem vindo ao Sorteia-Duplas");
+                        Console.WriteLine("---------------------------------------\n\n");
+                        Console.WriteLine("\nIntrodução rápida:  ");
+                        Console.WriteLine("\nEsse programa, irá sortear\n" +
+                            "às duplas inseridas em ordem aleatória,\n" +
+                            "de acordo com a quantidade indivíduos digitada!\n\n\n");
+
+                        Console.Write("Quantas pessoas deseja registrar:  ");
+                        n = int.Parse(Console.ReadLine());
+                        if (n % 2 != 0)
+                        {
+                            Console.WriteLine("\n\nDigite uma quantidade par de pessoas!!");
+                            Thread.Sleep(2000);
+                        }
+                    } while (n % 2 != 0);
+                    string[] name = new string[n];
+                    string[] rName = new string[n];
+                    string[,] nameDuos = new string[n, 2];
+                    Console.Clear();
+
+                    for (int i = 0; i < n; i++)
+                    {
+                        Console.Write($"Insira o {i + 1}° nome: ");
+                        name[i] = Console.ReadLine();
+                    }
+
+                    for (int i = 0; i < n; i++)
+                    {
+
+                        do
+                        {
+                            a = nGen.Next(0, n);
+                        } while (name[a] == "*");
+                        if (name[a] != "*")
+                        {
+                            rName[i] = name[a];
+                        }
+                        name[a] = "*";
+
+                    }
+
+                    Console.Clear();
+                    b = n / 2;
+                    c = 1;
+                    for (int i = 0; i <= b; i += 2)
+                    {
+                        if (b < n - 2)
+                        {
+                            b++;
+                        }
+                        nameDuos[i, 0] = rName[i]; nameDuos[i, 1] = rName[i + 1];
+                        Console.WriteLine($"A {c}° dupla é: {nameDuos[i, 0]} , {nameDuos[i, 1]}");
+                        Thread.Sleep(1000);
+                        c++;
+                    }
+
+                    Console.WriteLine("\n\nVocê deseja continuar o Sorteia-Nomes? (s / n) : ");
+                    resp = Console.ReadLine();
+                    resp = resp.Length > 0 ? resp[0].ToString().ToLower() : "n";
+                } while (resp.Equals("s"));
+            }
+        }
+    }
+}
