@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="icon" href="img/IconGame1.png">
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="quizz.css">
+    <link rel="stylesheet" href="AdivImg.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <title>ProjectVs</title>
+
+
+    <style>
+
+        body {
+            color: #f8f9fa;
+        }
+
+
+        .Bgcolor {
+            background: linear-gradient(50deg, rgb(119, 119, 119), black);
+        }
+
+
+        .question {
+            margin: 20px 0;
+        }
+
+        /* Diminui o tamanho da fonte em telas menores */
+        @media (max-width: 991px) and (min-width: 767px){
+           div{
+                font-size: 12px;
+           }
+           div.p{
+                margin: 8%;
+           }
+            .titulo{
+                font-size: x-large;
+            }
+            .bg-card{
+                transform: scale(0.8);
+            }
+            .bg-card:hover{
+                transform: scale(0.87);
+            }
+            .sub-Titulo{
+                font-size: larger;
+            }
+            input{
+                font-size: x-small;
+            }
+        }
+
+
+        @media(min-width:319px) and (max-width: 765px){
+            div{
+                font-size: 10px;
+            }
+            .titulo{
+                font-size: large;
+            }
+            input{
+                transform: scale(0.7);
+                font-size: 10px;
+            }
+        }
+
+
+        @media(max-width: 320px){
+            .inicio{
+                margin-top: -200%
+            }
+        }
+
+
+        @media(max-width: 375px) and (min-width: 321px){
+            .inicio{
+                margin-top: -170%
+            }
+        }
+
+
+        @media(max-width: 425px) and (min-width: 376px){
+            .inicio{
+                margin-top: -150%
+            }
+        }
+
+
+        @media(min-width: 768px) and (max-width: 1023px) {
+            .inicio{
+                margin-top: -80%
+            }
+        }
+
+
+        @media(min-width: 1024px) and (max-width:1439px) {
+            .inicio{
+                margin-top: -50%
+            }
+        }
+
+
+        @media(min-width: 1440px){
+            .inicio{
+                margin-top: -30%
+            }
+        }
+        
+
+        @media(min-width: 1024px) and ((max-width: 1200px)){
+            .navbar-collapse{
+                margin-left: 2%;
+            }
+        }
+
+
+        @media(min-width: 1200px) and ((max-width: 1300px)){
+            .navbar-collapse{
+                margin-left: 5%;
+            }
+        }
+
+
+        @media(min-width: 1300px) and ((max-width: 1440px)){
+            .navbar-collapse{
+                margin-left: 10%;
+            }
+        }
+        @media(min-width: 1440px) and ((max-width: 1600px)){
+            .navbar-collapse{
+                margin-left: 12%;
+            }
+        }
+        @media(min-width: 1601px){
+            .navbar-collapse{
+                margin-left: 24%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body class="Bgcolor">
+    <nav id="navbar-AdivImg" class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top shadow-NavBar" data-bs-theme="dark">
+                <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon animated-hamburguer"></span>
+                </button>
+                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">
+                            <img src="img/houseIcon.png" class="rounded float-start" style="margin-top: 0.25cm; margin-right: 0.5cm;" alt="..." width="20" >Menu de Jogos
+                        </a></h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="intro-text" style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div> 
+
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Lista de Jogos
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><h6 class="dropdown-header">Adivinhação</h6></li>
+                                    <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
+                                    <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
+                                    <li><a class="dropdown-item" href="LevelsNum.html">Torre de desafios</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header">Quizz</a></li>
+                                    <li><a class="dropdown-item" href="quizz.html">Conhecimentos gerais</a></li>
+                                    <li><a class="dropdown-item" href="qmvc.html">Seu quizz</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header">Tibet</h6></li>
+                                    <li><a class="dropdown-item" href="Tibet.html">Teste Tibet</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header">Desenvolvedores</h6></li>
+                                    <li><a class="dropdown-item" href="Devs.html">Devs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <!-- Itens individuais visíveis em telas maiores -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivImg.html">Imagens</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivNum.html">Números</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="LevelsNum.html">Torre de desafios</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="quizz.html">Conhecimentos gerais</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="qmvc.html">Seu quizz</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="Tibet.html">Teste Tibet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Devs.html">Devs</a></li>
+                            <ul class="nav nav-pills" style="--bs-scroll-height: 100px;">
+                                <li class="nav-item"><a class="nav-link animated-Button link-light" href="#scrollspyHeading1">Introdução</a></li>
+                                <li class="nav-item"><a class="nav-link animated-Button link-light" href="#scrollspyHeading2">Início</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5 pt-3">
+            <div style="text-align: center;">
+                <div class="spark-container">
+                    <h2 class="display-3 titulo" style="margin: 3cm; margin-bottom: 30%; font-family: Arial;">Teste seus conhecimentos sobre jogos</h2>
+                    <h4 class="display-5 titulo" style="margin: 2cm;margin-top:0cm;font-family: Arial;" id="scrollspyHeading1">introdução</h4>
+                    <p style="text-align: justify;">Este é um jogo desenvolvido para que você teste alguns de seus  conhecimentos sobre jogos,
+                        para cada pergunta, marque a alternativa correta, e ao final, verifique se você realmente conhece essas obras!!
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="inicio" style="text-align: center;">
+                <h4 class="display-5" style="margin: 3cm; margin-bottom: 0cm; font-family: Arial;" id="scrollspyHeading2">Início</h4>
+            </div>
+
+            <form name="formQuizz" class="mt-4">
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3">
+                            <label class="form-label sub-Titulo" style="margin:0.3cm">Qual é o jogo mais vendido de todos os tempos?</label>
+                        <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r0"  value="Tetris"> Tetris<br>
+                                <input type="radio" name="r0"  value="Minecraft"> Minecraft<br>
+                                <input type="radio" name="r0"  value="Grand Theft Auto V"> Grand Theft Auto V<br>
+                                <input type="radio" name="r0"  value="Wii Sports"> Wii Sport
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual personagem é conhecido como o encanador mais famoso?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r1"  value="Sonic"> Sonic<br>
+                                <input type="radio" name="r1"  value="Mario"> Mario<br>
+                                <input type="radio" name="r1"  value="Link"> Link<br>
+                                <input type="radio" name="r1"  value="Pikachu"> Pikachu
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual jogo popular é conhecido por seu modo Battle Royale?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r2"  value="Fortnite"> Fortnite<br>
+                                <input type="radio" name="r2"  value="The Legend of Zelda"> The Legend of Zelda<br>
+                                <input type="radio" name="r2"  value="The Sims"> The Sims<br>
+                                <input type="radio" name="r2"  value="World of Warcraft"> World of Warcraft
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question"> 
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
+                                Qual destas franquias, lançada originalmente no Japão, envolve capturar criaturas para treiná-las e colocá-las em batalhas, sendo conhecida pelo slogan "Gotta Catch 'Em All"?
+                            </label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r3" value="Pocket Monsters"> Pocket Monsters<br>
+                                <input type="radio" name="r3" value="Monster Tamers"> Monster Tamers<br>
+                                <input type="radio" name="r3" value="Creature Collectors"> Creature Collectors<br>
+                                <input type="radio" name="r3" value="Digital Beastmasters"> Digital Beastmasters<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
+                                Qual dessas plataformas permite aos jogadores alterar e manipular um ambiente virtual composto por unidades cúbicas, promovendo tanto a criação quanto a modificação livre de estruturas?
+                            </label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r4" value="Roblox"> Roblox<br>
+                                <input type="radio" name="r4" value="Terraria"> Terraria<br>
+                                <input type="radio" name="r4" value="Minecraft"> Minecraft<br>
+                                <input type="radio" name="r4" value="7 Days to Die"> 7 Days to Die<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
+                                Em qual jogo clássico de tabuleiro, amplamente adaptado para o digital, os jogadores podem adquirir ativos fictícios, cobrar tarifas de outros jogadores e gerenciar recursos financeiros?
+                            </label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r5" value="Catan"> Catan<br>
+                                <input type="radio" name="r5" value="Monopoly"> Monopoly<br>
+                                <input type="radio" name="r5" value="Risk"> Risk<br>
+                                <input type="radio" name="r5" value="The Game of Life"> The Game of Life<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
+                                Na famosa série de fantasia que explora um reino lendário, qual personagem é conhecido por carregar uma espada sagrada e enfrentar uma entidade sombria repetidamente?
+                            </label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r6" value="Eldrick"> Eldrick<br>
+                                <input type="radio" name="r6" value="Zelda"> Zelda<br>
+                                <input type="radio" name="r6" value="Ganondorf"> Ganondorf<br>
+                                <input type="radio" name="r6" value="Link"> Link<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual é o jogo em que você é um ladrão em um mundo aberto e pode realizar várias missões?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r7"  value="GTA V"> GTA V<br>
+                                <input type="radio" name="r7"  value="Assassin's Creed"> Assassin's Creed<br>
+                                <input type="radio" name="r7"  value="Far Cry"> Far Cry<br>
+                                <input type="radio" name="r7"  value="Watch Dogs"> Watch Dogs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual é o nome do famoso jogo de cartas colecionáveis da Blizzard?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r8"  value="Yu-Gi-Oh!"> Yu-Gi-Oh!<br>
+                                <input type="radio" name="r8"  value="Magic: The Gathering"> Magic: The Gathering<br>
+                                <input type="radio" name="r8"  value="Hearthstone"> Hearthstone<br>
+                                <input type="radio" name="r8"  value="Pokémon TCG"> Pokémon TCG
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
+                                Em qual jogo de sobrevivência, ambientado em um mundo sombrio e imprevisível, o jogador enfrenta criaturas hostis e gerencia sua sanidade enquanto coleta recursos para enfrentar desafios naturais?
+                            </label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r9" value="The Forest"> The Forest<br>
+                                <input type="radio" name="r9" value="Darkwood"> Darkwood<br>
+                                <input type="radio" name="r9" value="Don't Starve"> Don't Starve<br>
+                                <input type="radio" name="r9" value="Green Hell"> Green Hell<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card">
+                    <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
+                        <div class="mb-3 question">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
+                                Em qual jogo de simulação automobilística renomado os jogadores podem experimentar física de direção precisa, com foco em provas de circuito e veículos licenciados com múltiplas opções de ajuste?
+                            </label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
+                                <input type="radio" name="r10" value="Assetto Corsa"> Assetto Corsa<br>
+                                <input type="radio" name="r10" value="Gran Turismo"> Gran Turismo<br>
+                                <input type="radio" name="r10" value="Project CARS"> Project CARS<br>
+                                <input type="radio" name="r10" value="F1 2022"> F1 2022<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="text-center resultado">
+                    <button type="button" class="btn btn-primary" onclick="respostas()">Ver o Resultado</button>
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+
+            <script>
+                const sparkContainer = document.querySelector('.spark-container');
+                const pageHeight = document.documentElement.scrollHeight;
+            
+                for (let i = 0; i < 30; i++) { // Adiciona 30 faíscas para cobrir a tela
+                    const spark = document.createElement('div');
+                    spark.classList.add('spark');
+                    
+                    // Define posição horizontal aleatória e atraso de animação aleatório
+                    spark.style.left = Math.random() * 100 + 'vw';
+                    spark.style.animationDelay = Math.random() * 0.1 + 's';
+                    
+                    // Define duração de animação aleatória entre 8s e 12s para variação
+                    spark.style.animationDuration = Math.random() * 3 + 6 + 's'; 
+                    
+                    sparkContainer.appendChild(spark);
+                }
+            </script>
+            
+        </div>
+    </div>
+
+
+
+    <script>
+        function respostas() {
+            var acertos = 0;
+            var resp0 = document.formQuizz.r0.value;
+            var resp1 = document.formQuizz.r1.value;
+            var resp2 = document.formQuizz.r2.value;
+            var resp3 = document.formQuizz.r3.value;
+            var resp4 = document.formQuizz.r4.value;
+            var resp5 = document.formQuizz.r5.value;
+            var resp6 = document.formQuizz.r6.value;
+            var resp7 = document.formQuizz.r7.value;
+            var resp8 = document.formQuizz.r8.value;
+            var resp9 = document.formQuizz.r9.value;
+            var resp10 = document.formQuizz.r10.value;
+
+            var resposta = [
+                "Minecraft", // r0
+                "Mario",     // r1
+                "Fortnite",  // r2
+                "Pocket Monsters",   // r3
+                "Minecraft", // r4
+                "Monopoly",  // r5
+                "Link",      // r6
+                "GTA V",     // r7
+                "Hearthstone", // r8
+                "Don't Starve", // r9
+                "Gran Turismo" // r10
+            ];
+
+            if (resp0 == resposta[0]) acertos++;
+            if (resp1 == resposta[1]) acertos++;
+            if (resp2 == resposta[2]) acertos++;
+            if (resp3 == resposta[3]) acertos++;
+            if (resp4 == resposta[4]) acertos++;
+            if (resp5 == resposta[5]) acertos++;
+            if (resp6 == resposta[6]) acertos++;
+            if (resp7 == resposta[7]) acertos++;
+            if (resp8 == resposta[8]) acertos++;
+            if (resp9 == resposta[9]) acertos++;
+            if (resp10 == resposta[10]) acertos++;
+
+            if (acertos > 0) {
+                var erros = 11 - acertos; // Ajustar conforme o número de perguntas
+                var porcentagem = (acertos / 11) * 100;
+                if(acertos > 1){
+                    alert('Total de Acertos = ' + acertos + ' com um total de ' + Math.round(porcentagem) + '% de aproveitamento ✨'
+                    + ', e errou ' + erros + ' questões');
+                }else if(acertos == 1){
+                    alert('Você acertou apenas ' + acertos + ' questão, com cerca de ' + Math.round(porcentagem) + '% de aproveitamento'
+                    + ', nós sabemos que você pode fazer muito mais! 😊✨');
+                }
+                
+                // Adicione feedback baseado no desempenho...
+            } else {
+                alert('Você errou tudo, ou não escolheu nada 😭. Tente Novamente!!💪');
+            }
+        }
+    </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

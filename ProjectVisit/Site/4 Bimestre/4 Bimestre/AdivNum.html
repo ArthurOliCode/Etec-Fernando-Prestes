@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/IconGame1.png">
+    <link rel="stylesheet" href="AdivImg.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style class="text/css">
+    </style>
+    <title>Adivinhação Num</title>
+    
+</head>
+<body class="Bgcolor">
+    <nav id="navbar-AdviNum" class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
+        <div class="container-fluid">
+                <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <ul class="nav nav-pills" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#scrollspyHeading1">Introdução</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#scrollspyHeading2">Início</a>
+                            </li>
+                        </ul>
+                        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">Menu de Jogos</a></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                     Aqui estão alguns jogos para que você aprenda se divertindo!!!
+                                </div>
+
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Lista de Jogos
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                            <li><h6 class="dropdown-header">Adivinhação</h6></li>
+                                            <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
+                                            <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><h6 class="dropdown-header">Quizz</h6></li>
+                                            <li><a class="dropdown-item" href="#">Quizz</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><h6 class="dropdown-header">Tibet</h6></li>
+                                            <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><h6 class="dropdown-header">Jogo Livre</h6></li>
+                                            <li><a class="dropdown-item" href="#">Jogo</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                </nav>
+        </div>
+    </nav>
+
+    <div data-bs-spy="scroll" class="scrollpy-example bg-body-tertiary p-3 rounded-2" data-bs-target="#navbar-AdviNum" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+        <div class="container p-5 mt-3">
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <div class="container text-center">
+                    Veja as imagens a seguir, memorize alguma delas, e eu irei adivinhar.
+                </div>
+                <button type="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <div class="container text-center ">
+                    Apenas errarei, caso você não indentifique corretamente as cartas!
+                </div>
+                <button type="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+                <div class="id-TabelaNumeros">
+                    <div class="container text-center">
+                        <table class="table table-hover table-dark table-striped border border-end-0 border-info table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Números</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <p class="strong"><u>1</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>2</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>3</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>4</u></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>
+                                        <p class="strong"><u>5</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>6</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>7</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>8</u></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>
+                                        <p class="strong"><u>9</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>10</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>11</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>12</u></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>
+                                        <p class="strong"><u>13</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>14</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>15</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>16</u></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>
+                                        <p class="strong"><u>17</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>18</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>19</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>20</u></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>
+                                        <p class="strong"><u>21</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>22</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>23</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>24</u></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>
+                                        <p class="strong"><u>25</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>26</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>27</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>28</u></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>
+                                        <p class="strong"><u>29</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>30</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u>31</u></p>
+                                    </td>
+                                    <td>
+                                        <p class="strong"><u></u></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>   
+                    </div>
+                </div>
+
+
+                <div class="container mt-2">
+                    <div class="container text-center">
+                        <h2 id="scrollspyHeading1" class="display-6" style="margin-top: 4cm; margin-bottom: 2cm;">Introdução</h2>
+                        <p style="text-align:justify;">Neste jogo, você escolherá um número, e marcará se ele está nas tabelas númericas abaixo.
+                            Por favor, pense em um digíto presente na tabela de exposição acima, e seja honesto,
+                            ao final eu adivinharei a sua escolha. Preste atencção em suas escolhas, e se divirta!!
+                        </p>
+                        <h2 id="scrollspyHeading2" class="display-6" style="margin-top: 4cm;">Início</h2>
+                        <table class="table table-hover table-dark table-striped border border-end-0 border-info" style="margin-top: 3cm;">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <p class="strong">1<p class="strong">
+                                    </td>
+                                    <td>
+                                        <p class="strong">3<p class="strong">
+                                    </td>
+                                    <td>
+                                        <p class="strong">5<p class="strong">
+                                    </td>
+                                    <td>
+                                        <p class="strong">7</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>
+                                        <p class="strong">9</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">11</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">13</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">15</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>
+                                        <p class="strong">17</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">19</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">21</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">23</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>
+                                        <p class="strong">25</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">27</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">29</p>
+                                    </td>
+                                    <td>
+                                        <p class="strong">31</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="card-body">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="op1" id="op1Sim" value="Sim">
+                                <label class="form-check-label" for="op1Sim">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="op1" id="op1Nao" value="Nao" checked>
+                                <label class="form-check-label" for="op1Nao">Não</label>
+                        </div>
+                </div>
+
+
+
+                    <table class="table table-hover table-dark table-striped border border-end-0 border-info" style="margin-top: 3cm;">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</tr>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <p class="strong">2</p>
+                                </td>
+                                <td>
+                                    <p class="strong">3</p>
+                                </td>
+                                <td>
+                                    <p class="strong">6</p>
+                                </td>
+                                <td>
+                                    <p class="strong">7</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    <p class="strong">10</p>
+                                </td>
+                                <td>
+                                    <p class="strong">11</p>
+                                </td>
+                                <td>
+                                    <p class="strong">14</p>
+                                </td>
+                                <td>
+                                    <p class="strong">15</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                    <p class="strong">18</p>
+                                </td>
+                                <td>
+                                    <p class="strong">19</p>
+                                </td>
+                                <td>
+                                    <p class="strong">22</p>
+                                </td>
+                                <td>
+                                    <p class="strong">23</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>
+                                    <p class="strong">26</p>
+                                </td>
+                                <td>
+                                    <p class="strong">27</p>
+                                </td>
+                                <td>
+                                    <p class="strong">30</p>
+                                </td>
+                                <td>
+                                    <p class="strong">31</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op2" id="op2Sim" value="Sim">
+                            <label class="form-check-label" for="op2Sim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op2" id="op2Nao" value="Nao" checked>
+                            <label class="form-check-label" for="op2Nao">Não</label>
+                    </div>
+
+
+                
+
+                    <table class="table table-hover table-dark table-striped border border-end-0 border-info" style="margin-top: 3cm;">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</tr>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <p class="strong">4</p>
+                                </td>
+                                <td>
+                                    <p class="strong">5</p>
+                                </td>
+                                <td>
+                                    <p class="strong">6</p>
+                                </td>
+                                <td>
+                                    <p class="strong">7</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    <p class="strong">12</p>
+                                </td>
+                                <td>
+                                    <p class="strong">13</p>
+                                </td>
+                                <td>
+                                    <p class="strong">14</p>
+                                </td>
+                                <td>
+                                    <p class="strong">15</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                    <p class="strong">20</p>
+                                </td>
+                                <td>
+                                    <p class="strong">21</p>
+                                </td>
+                                <td>
+                                    <p class="strong">22</p>
+                                </td>
+                                <td>
+                                    <p class="strong">23</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>
+                                    <p class="strong">28</p>
+                                </td>
+                                <td>
+                                    <p class="strong">29</p>
+                                </td>
+                                <td>
+                                    <p class="strong">30</p>
+                                </td>
+                                <td>
+                                    <p class="strong">31</p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op3" id="op3Sim" value="Sim">
+                            <label class="form-check-label" for="op3Sim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op3" id="op3Nao" value="Nao" checked>
+                            <label class="form-check-label" for="op3Nao">Não</label>
+                    </div>
+
+
+
+                    <table class="table table-hover table-dark table-striped border border-end-0 border-info" style="margin-top: 3cm;">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</tr>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <p class="strong">8</p>
+                                </td>
+                                <td>
+                                    <p class="strong">9</p>
+                                </td>
+                                <td>
+                                    <p class="strong">10</p>
+                                </td>
+                                <td>
+                                    <p class="strong">11</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    <p class="strong">12</p>
+                                </td>
+                                <td>
+                                    <p class="strong">13</p>
+                                </td>
+                                <td>
+                                    <p class="strong">14</p>
+                                </td>
+                                <td>
+                                    <p class="strong">15</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                    <p class="strong">24</p>
+                                </td>
+                                <td>
+                                    <p class="strong">25</p>
+                                </td>
+                                <td>
+                                    <p class="strong">26</p>
+                                </td>
+                                <td>
+                                    <p class="strong">37</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>
+                                    <p class="strong">28</p>
+                                </td>
+                                <td>
+                                    <p class="strong">29</p>
+                                </td>
+                                <td>
+                                    <p class="strong">30</p>
+                                </td>
+                                <td>
+                                    <p class="strong">31</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <div class="card-body">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="op4" id="op4Sim" value="Sim">
+                                <label class="form-check-label" for="op4Sim">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="op4" id="op4Nao" value="Nao" checked>
+                                <label class="form-check-label" for="op4Nao">Não</label>
+                        </div>
+
+                        <table class="table table-hover table-dark table-striped border border-end-0 border-info" style="margin-top: 3cm;">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</tr>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <p class="strong">16</p>
+                                </td>
+                                <td>
+                                    <p class="strong">17</p>
+                                </td>
+                                <td>
+                                    <p class="strong">18</p>
+                                </td>
+                                <td>
+                                    <p class="strong">19</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    <p class="strong">20</p>
+                                </td>
+                                <td>
+                                    <p class="strong">21</p>
+                                </td>
+                                <td>
+                                    <p class="strong">22</p>
+                                </td>
+                                <td>
+                                    <p class="strong">23</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                    <p class="strong">24</p>
+                                </td>
+                                <td>
+                                    <p class="strong">25</p>
+                                </td>
+                                <td>
+                                    <p class="strong">26</p>
+                                </td>
+                                <td>
+                                    <p class="strong">27</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>
+                                    <p class="strong">28</p>
+                                </td>
+                                <td>
+                                    <p class="strong">29</p>
+                                </td>
+                                <td>
+                                    <p class="strong">30</p>
+                                </td>
+                                <td>
+                                    <p class="strong">31</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="card-body">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op5" id="op5Sim" value="Sim">
+                            <label class="form-check-label" for="op5Sim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op5" id="op5Nao" value="Nao" checked>
+                            <label class="form-check-label" for="op5Nao">Não</label>
+                    </div>
+                    <h1 style="margin-top: 3cm"></h1>
+                <div class="container text-center">
+                    <button type="button" class="btn btn-primary mt-3" onclick="respostas()">Ver o Resultado</button>
+                    <button type="reset" class="btn btn-secondary mt-3">Limpar Respostas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+        <script language="Javascript">
+            function respostas() {
+                var acertos = 0;
+
+
+                var resp1 = document.querySelector('input[name="op1"]:checked')?.value;
+                var resp2 = document.querySelector('input[name="op2"]:checked')?.value;
+                var resp3 = document.querySelector('input[name="op3"]:checked')?.value;
+                var resp4 = document.querySelector('input[name="op4"]:checked')?.value;
+                var resp5 = document.querySelector('input[name="op5"]:checked')?.value;;
+    
+                if (resp1 == "Sim") acertos += 1;
+                if (resp2 == "Sim") acertos += 2;
+                if (resp3 == "Sim") acertos += 4;
+                if (resp4 == "Sim") acertos += 8;
+                if (resp5 == "Sim") acertos += 16;
+    
+                if (acertos > 0) {
+                    document.body.innerHTML = `
+                        <div class="container text-center mt-3">
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">O número que você pensou foi: ` + acertos + `</h4>
+                                <hr>
+                                <img src="img/Akinator.png" class="img-fluid" alt="Adivinhador">
+                                <br><br>
+                                <a href="" class="btn btn-primary mt-3">Tentar Novamente</a>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    document.body.innerHTML = `
+                        <div class="container p-5 mt-3">
+                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <div class="container text-center">
+                                    Você não selecionou as opções corretamente!
+                                </div>
+                            <button type="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="container text-center">
+                                <a href="" class="btn btn-primary mt-3">Tentar Novamente</a>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

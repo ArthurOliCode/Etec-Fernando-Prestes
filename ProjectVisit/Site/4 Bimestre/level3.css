@@ -1,0 +1,23 @@
+.gradient-level3{
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(68, 0, 0), rgba(117, 0, 0, 0.63), rgba(148, 0, 0, 0.61), rgba(153, 48, 0, 0.644), rgba(214, 68, 0, 0.644));
+    background-size: 400% 400%;
+    animation: bckAnimation 20s ease infinite;
+}
+
+@keyframes bckAnimation {
+    0% {
+        background-position: 0% 50%; /* Posição inicial */
+    }
+    25% {
+        background-position: 50% 50%; /* Metade do caminho horizontal */
+    }
+    50% {
+        background-position: 100% 50%; /* Final do caminho horizontal */
+    }
+    75% {
+        background-position: 50% 50%; /* Volta para o meio */
+    }
+    100% {
+        background-position: 0% 50%; /* Retorna à posição inicial */
+    }
+}

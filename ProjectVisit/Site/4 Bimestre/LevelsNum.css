@@ -1,0 +1,106 @@
+.gradientBodyNum {
+    background: linear-gradient(90deg, rgb(69, 0, 97), rgb(122, 0, 90), rgb(29, 0, 92));
+    background-size: 400% 400%; /* Aumenta a escala do background para dar um efeito de movimento */
+    animation: gradientAnimation 15s ease infinite; /* Controle da duração e fluidez */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.neon-border {
+    position: relative;
+    border-radius: 15px; /* Ajusta a borda do card */
+    padding: 20px;
+    overflow: hidden;
+}
+
+.neon-border::before {
+    content: '';
+    position: absolute;
+    top: -15px; /* Aumenta a distância para destacar mais */
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(90deg, rgba(60, 0, 72, 0.6), rgba(80, 0, 59, 0.6), rgba(18, 0, 57, 0.6));
+    z-index: -1;
+    border-radius: 20px; /* Aumenta o raio da borda para acompanhar a expansão */
+    animation: neonGlow 5s linear infinite;
+    filter: blur(10px); /* Aumenta o desfoque para dar mais destaque ao efeito de neon */
+}
+
+@keyframes neonGlow {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1); /* Expande mais para dar destaque durante a animação */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+.bat {
+    position: fixed;
+    bottom: -50px; /* Aparece a partir da parte inferior da tela */
+    width: 20px;
+    height: 20px;
+    background-image: url('img/batIcon.png'); /* Substitua pelo caminho da imagem do morcego */
+    background-size: cover;
+    animation: flyUp 5s linear forwards;
+    z-index: 100; /* Garante que esteja na frente do background */
+}
+
+@keyframes flyUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg); /* Move em direção ao topo e rotaciona */
+        opacity: 0;
+    }
+}
+
+
+.pumpkin {
+    position: fixed;
+    bottom: -50px; /* Ponto de partida fora da tela */
+    width: 25px; /* Ajuste conforme desejado */
+    height: 25px;
+    background-image: url('img/HalloweenP.png'); /* Caminho do ícone da abóbora */
+    background-size: cover;
+    opacity: 0; /* Inicia invisível */
+    animation: flyUpPumpkin 5s linear forwards;
+    z-index: 100;
+}
+
+@keyframes flyUpPumpkin {
+    0% {
+        transform: translateY(0);
+        opacity: 0; /* Início do fade-in */
+    }
+    10% {
+        opacity: 1; /* Fica visível */
+    }
+    90% {
+        opacity: 1; /* Mantém a visibilidade */
+    }
+    100% {
+        transform: translateY(-100vh); /* Move até o topo */
+        opacity: 0; /* Desaparece no final (fade-out) */
+    }
+}
+

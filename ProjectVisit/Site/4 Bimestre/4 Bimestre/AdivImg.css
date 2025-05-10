@@ -1,0 +1,44 @@
+
+head{
+    background-color: #000000;
+}
+
+
+img:hover{
+    width: 270px;
+    filter:contrast(1);
+    transition-duration: 1.5s;
+}
+
+.Id-TabelaImagens{
+    position: relative;
+}
+
+.border-info{
+    --bs-border-opacity: .5;
+    border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
+}
+
+h1{
+    margin-top:5cm;
+}
+
+.animated-table:hover{
+    transform: scale(1.04);
+    filter:contrast(1.1);
+    filter: saturate(1.4);
+    transition-duration: 2s;
+}
+.animated-table:not(:hover){
+    transform: scale(1);
+    transition-duration: 1s;
+}
+.animated-button:hover{
+    transform: scale(1.2);
+    filter: brightness(1.2);
+    transition-duration: 1s;
+}
+.animated-button:not(:hover){
+    transform: scale(1);
+    transition-duration: 1s;
+}

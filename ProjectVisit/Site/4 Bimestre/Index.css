@@ -1,0 +1,117 @@
+.gradient-bgIndex{
+    background: linear-gradient(90deg, rgb(5, 0, 1), rgb(0, 26, 59));
+    color: whitesmoke;
+}
+
+.shadow-NavBar{
+    position:relative;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: black;
+    animation: shadow 8s ease infinite;
+    box-shadow: 
+                0px 0px 20px black,   
+                0px 0px 30px rgb(53, 53, 53),
+                0px 0px 40px rgb(90, 90, 90);
+}
+
+@keyframes shadow{
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.795), 
+                    0 0 30px rgba(70, 70, 70, 0.5), 
+                    0 0 40px rgba(155, 155, 155, 0.24),
+                    0 0 50px rgba(245, 245, 245, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.801), 
+                    0 0 60px rgba(70, 70, 70, 0.5), 
+                    0 0 7px rgba(155, 155, 155, 0.425),
+                    0 0 80px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.822), 
+                    0 0 30px rgba(63, 63, 63, 0.568), 
+                    0 0 40px rgba(155, 155, 155, 0.219),
+                    0 0 50px rgba(255, 251, 251, 0.1);
+    }
+}
+
+/* Navbar estilos */
+.navbar-nav{
+    flex-direction: row; /* Itens em linha horizontal */
+}
+
+
+/* CSS para controlar a exibição dos itens com base na altura da tela */
+@media (min-width: 992px) {
+    .nav-item.dropdown {
+        display: none;
+    }
+    .nav-item.game-item {
+        display: block;
+    }
+}
+
+/* Diminuir fonte em telas menores*/
+@media(max-width: 991px) and (min-width:767px){
+    div{
+        font-size: 12px;
+    }
+}
+@media(min-width: 319px) and (max-width: 765px){
+    div{
+        font-size: 10px;
+    }
+    .carousel{
+        transform: scale(1.6);
+    }
+}
+
+
+/* Aumentar o espaçamento entre itens em telas grandes */
+@media (min-width: 992px) {
+    .navbar-nav {
+        gap: 60px; /* Define a distância entre os itens */
+    }
+    .intro-text {
+        display: none; /* Ocultar o texto de introdução em telas maiores */
+    }
+    p{
+        font-size: large;/*Aumentar tamanho da fonte em telas maiores*/
+    }
+}
+
+/*Exibição do dropdown de acordo com a altura da tela*/
+@media (max-height: 540px) and (max-width: 991px) and (max-width:not(998px)) {
+    .nav-item.dropdown {
+        display: block;
+    }
+    .nav-item.game-item {
+        display: none;
+    }
+
+}
+/* Exibir offcanvas em telas pequenas */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        display: none; /* Oculta a navbar para telas menores */
+    }
+    .offcanvas {
+        display: block !important;
+    }
+    .navbar-toggler {
+        display: block; /* Exibe o botão do menu */
+    }
+    .intro-text {
+        display: block; /* Exibe o texto de introdução */
+        font-size: larger;
+        margin: 5%;
+    }
+}
+
+
+/* Navbar fixa para impedir que ocupe mais do que o necessário */
+.navbar{
+    max-width: 100%;
+    overflow: hidden; /* Impede que a navbar expanda demais */
+}
